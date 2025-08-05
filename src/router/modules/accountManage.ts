@@ -3,13 +3,13 @@ import { Layout } from '@/router/constant';
 import { SettingOutlined } from '@vicons/antd';
 import { renderIcon } from '@/utils/index';
 
-const routeName = 'account';
+const routeName = 'accountManage';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/account',
-    name: 'Setting',
-    redirect: '/account/account',
+    path: '/accountManage',
+    name: 'accountManage',
+    redirect: '/account/fund-details',
     component: Layout,
     meta: {
       title: '账户管理',
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
       },
       {
         path: 'price-details',
-        name: 'price-details',
+        name: `${routeName}_price-details`,
         meta: {
           title: '价格明细',
         },

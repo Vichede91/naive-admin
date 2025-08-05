@@ -5,33 +5,33 @@ import { renderIcon } from '@/utils/index';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/list',
-    name: 'List',
-    redirect: '/list/basic-list',
+    path: '/taskManage',
+    name: 'taskManage',
+    redirect: '/taskManage/list',
     component: Layout,
     meta: {
-      title: '账户管理',
+      title: '任务管理',
       icon: renderIcon(TableOutlined),
-      sort: 12,
+      sort: 2,
     },
     children: [
       {
-        path: 'basic-list',
-        name: 'basic-list',
+        path: 'list',
+        name: 'taskManageList',
         meta: {
-          title: '基础列表',
+          title: '任务管理',
         },
-        component: () => import('@/views/list/basicList/index.vue'),
+        component: () => import('@/views/taskManage/index.vue'),
       },
       {
-        path: 'basic-info/:id?',
-        name: 'basic-info',
+        path: 'info/:id?',
+        name: 'taskManageInfo',
         meta: {
-          title: '基础详情',
+          title: '任务管理详情',
           hidden: true,
-          activeMenu: 'basic-list',
+          activeMenu: 'list',
         },
-        component: () => import('@/views/list/basicList/info.vue'),
+        component: () => import('@/views/taskManage/info.vue'),
       },
     ],
   },

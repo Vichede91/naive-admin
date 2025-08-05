@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: '设置页面',
       icon: renderIcon(SettingOutlined),
-      sort: 6,
+      sort: 16,
     },
     children: [
       {
